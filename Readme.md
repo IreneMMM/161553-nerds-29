@@ -1,7 +1,7 @@
 # Личный проект «Нёрдс»
 
 * Студент: [Ирина](https://up.htmlacademy.ru/htmlcss/29/user/161553).
-* Наставник: `Неизвестно`.
+* Наставник: [Ольга Дука](https://up.htmlacademy.ru/htmlcss/29/user/337127).
 
 ---
 
