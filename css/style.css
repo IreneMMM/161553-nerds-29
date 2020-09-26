@@ -1,0 +1,271 @@
+/* Variables */
+
+:root {
+    --basic-white: #FFFFFF;
+    --basic-white-transparent: rgba(255, 255, 255, 0.3);
+    --basic-black: #000000;
+    --basic-grey: #EEEEEE;
+    --basic-pink: #FB565A;
+    --basic-green: #00CA74;
+    --basic-yellow: #EFC849;
+
+    --basic-text: #283136;
+    --basic-background:#FFFFFF;
+    --basic-navigation-background:#888888;
+    --basic-text-contacts: #666666;
+    --basic-text-footer: #444444;
+    --basic-socials-background: #E1E1E1;
+    --basic-price-control: #00CA74;
+    --basic-filter-controls: #4D4D4D;
+    --basic-down-arrow: #231F20;
+    --basic-up-arrow: #A6A6A6;
+    --basic-button-hover: #E74246;
+    --basic-button-active: #D7373B;
+    --basic-button-green: #00CA74;
+    --basic-button-green-hover: #00BC6C;
+    --basic-button-green-active: #00AA62;
+    --basic-button-yellow: #EFC84A;
+    --basic-button-yellow-hover: #EAB534;
+    --basic-button-yellow-active: #E5A722;
+
+  }
+  
+/* Global */
+
+body {
+  min-width: 960px;
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", "Arial", sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  font-style: normal;
+  font-weight: 400;
+  color: var(--basic-text);
+  background-color: var(--basic-background);
+  text-align: left;
+}
+
+a {
+  text-decoration: none;
+}
+  
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.visually-hidden {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+}
+
+/* Main navigation */
+
+.main-header {
+  background-color: var(--basic-grey);
+}
+
+.main-navigation {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 30px;
+  text-transform: uppercase;
+}
+
+.site-navigation {
+  list-style: none;
+}
+
+.site-navigation a,
+.cart-link a {
+  color: var(--basic-black);
+}
+
+.site-navigation a:hover,
+.cart-link a:hover {
+  color: var(--basic-pink);
+}
+
+.site-navigation a:focus,
+.cart-link a:focus {
+  color: var(--basic-black);
+  opacity: 0.3;
+}
+
+/* Slider */
+
+.slider-wrapper {
+  background-color: var(--basic-grey);
+}
+
+.slider-content h3 {
+  font-size: 55px;
+  font-weight: 500;
+  line-height: 55px;
+  color: var(--basic-black);
+}
+
+.slider-content p{
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.slider-img-1 {
+  background-color: var(--basic-grey);
+}
+
+/* Services */
+
+.services-item-title {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 30px;
+  text-transform: uppercase;
+  color: var(--basic-black);
+}
+
+/* Company */
+
+.promo-slogan {
+  font-size: 45px;
+  font-weight: 500;
+  line-height: 45px;
+  color: var(--basic-black);
+}
+
+.promo-services-title,
+.benefits-table-title {
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.benefits-table-title {
+  text-align: center;
+  color: var(--basic-black);
+}
+
+.promo-services-list {
+  list-style: none;
+}
+
+/* Benefits */
+
+.benefits-number {
+  font-size: 45px;
+  font-weight: 700;
+  line-height: 64px;
+  color: var(--basic-black);
+} 
+
+.benefits-percent {
+  font-size: 26px;
+  font-weight: 700;
+  line-height: 40px; 
+}
+
+.benefits-text {
+  line-height: 18px;
+  align-items: center;
+}
+
+/* Partners */
+
+.partners-list {
+  list-style: none;
+}
+
+/* Contacts */
+
+.map-img {
+  height: 416px;
+}
+
+.contacts-block {
+  background-color: #FFFFFF;
+}
+
+.contacts-block-title {
+  font-size: 18px;
+  line-height: 30px;
+  align-items: center;
+  text-transform: uppercase;
+  color: var(--basic-black);
+}
+
+.address {
+  line-height: 18px;
+  color: var(--basic-text-contacts);
+}
+
+/* Socials */
+
+.social-list {
+  list-style: none;
+}
+
+.footer-social-title {
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 36px;
+  color: var(--basic-black);
+}
+
+.footer-social-text {
+  line-height: 22px;
+  color: var(--basic-text-footer);
+}
+
+.button {
+  font: inherit;
+  text-align: center;
+  color: var(--basic-white);
+  vertical-align: middle;
+  text-transform: uppercase;
+  border: none;
+  background-color: var(--basic-pink);
+}
+
+.button:hover {
+  background-color: var(--basic-button-hover);
+}
+
+.button:active {
+  background-color: var(--basic-button-active);
+  color: var(--basic-white-transparent);
+}
+
+.button-green {
+  background-color: var(--basic-button-green);
+}
+
+.button-green:hover {
+  background-color: var(--basic-button-green-hover);
+}
+
+.button-green:active {
+  background-color: var(--basic-button-green-active);
+  color: var(--basic-white-transparent);
+}
+
+.button-yellow {
+  background-color: var(--basic-button-yellow);
+}
+
+.button-yellow:hover {
+  background-color: var(--basic-button-yellow-hover);
+}
+
+.button-yellow:active {
+  background-color: var(--basic-button-yellow-active);
+  color: var(--basic-white-transparent);
+}
+
+/* Modal */
+
+.modal {
+  color: var(--basic-black);
+}
