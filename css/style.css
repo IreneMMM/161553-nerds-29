@@ -4,6 +4,8 @@
     --basic-white: #FFFFFF;
     --basic-white-transparent: rgba(255, 255, 255, 0.3);
     --basic-black: #000000;
+    --basic-black-half-transparent: rgba(0, 0, 0, 0.6);  
+    --basic-black-transparent: rgba(0, 0, 0, 0.3);    
     --basic-grey: #EEEEEE;
     --basic-pink: #FB565A;
     --basic-green: #00CA74;
@@ -12,6 +14,8 @@
     --basic-text: #283136;
     --basic-background:#FFFFFF;
     --basic-navigation-background:#888888;
+    --basic-pagination-button: rgba(0, 0, 0, 0.0001);
+    --basic-pagination-button-border: #DBDBDB;
     --basic-text-contacts: #666666;
     --basic-text-footer: #444444;
     --basic-socials-background: #E1E1E1;
@@ -118,6 +122,94 @@ img {
   background-color: var(--basic-grey);
 }
 
+.catalog-page-title {
+  font-size: 55px;
+  font-weight: 500;
+  line-height: 55px;
+  color: var(--basic-black);
+}
+
+/* Filters */
+
+.catalog-filter h3 {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 30px;
+  color: var(--basic-black);
+  text-transform: uppercase;
+}
+
+.catalog-filter-list {
+  list-style: none;
+}
+
+.catalog-filter-item a {
+  font-size: 14px;
+  line-height: 18px;
+  color: var(--basic-black-transparent);
+  text-transform: uppercase;
+}
+
+.catalog-filter-item a:hover {
+  color: var(--basic-black-half-transparent);
+}
+
+.catalog-filter-item a:active {
+  color: var(--basic-black);
+}
+
+.catalog-filter-arrows,
+.catalog-list {
+  list-style: none;
+}
+
+.catalog-arrow a {
+  color: var(--basic-black-transparent);
+}
+
+.catalog-arrow a:hover {
+  color: var(--basic-black-half-transparent);
+}
+
+.catalog-arrow a:active {
+  color: var(--basic-down-arrow);
+}
+
+.active a {
+  color: var(--basic-black);
+}
+
+
+/* Catalog */
+
+.catalog-mask {
+  background-color: var(--basic-grey);
+}
+
+.catalog-mask h3 {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 30px;
+  text-align: center;
+  text-transform: uppercase;
+  color: var(--basic-black);
+}
+
+.catalog-mask-link h3:hover {
+  color: var(--basic-pink);
+}
+
+.catalog-mask-link h3:active {
+  color: var(--basic-black-transparent);
+}
+
+.catalog-item p {
+  line-height: 18px;
+  text-align: center;
+  color: var(--basic-text-contacts);
+}
+
+
 /* Services */
 
 .services-item-title {
@@ -177,6 +269,29 @@ img {
 .partners-list {
   list-style: none;
 }
+
+/* Pagination */
+
+.pagination-list {
+  list-style: none;
+}
+
+.pagination-item a {
+  font-weight: 500;
+  line-height: 18px;
+  color: var(--basic-black);
+  background-color: var(--basic-grey);
+  text-transform: uppercase;
+  text-align: center;
+  border-radius: 3px;
+}
+
+.pagination-item-current a {
+  background-color: var(--basic-pagination-button);
+  border: 3px solid var(--basic-pagination-button-border);
+}
+
+
 
 /* Contacts */
 
@@ -263,6 +378,16 @@ img {
   background-color: var(--basic-button-yellow-active);
   color: var(--basic-white-transparent);
 }
+
+.button-price {
+  font-weight: 500;
+  line-height: 18px;
+}
+
+.button-price:active {
+  color: var(--basic-white);
+}
+
 
 /* Modal */
 
