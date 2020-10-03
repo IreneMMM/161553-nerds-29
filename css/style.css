@@ -102,12 +102,11 @@ img {
 
 .site-navigation {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: repeat(4, 1fr);
   column-gap: 45px;
   width: 437px;
   list-style: none;
-  margin: 0;
-  margin-left: 202px;
+  margin: 0 auto;
   padding: 0;
 }
 
@@ -189,6 +188,7 @@ img {
 
 .catalog-page-bar {
   background-color: var(--basic-grey); 
+  margin-bottom: 55px;
 }
 
 .catalog-page-title-wrapper {
@@ -210,7 +210,16 @@ img {
 /* Filters */
 
 .catalog-filter {
-  margin-top: 55px;
+  margin-bottom: 48px;
+  display: grid;
+  column-gap: 41px;
+  grid-template-columns: 1fr 1fr;
+}
+
+.catalog-filters-wrapper {
+  display: grid;
+  grid-template-columns: auto auto;
+  column-gap: 47px;
 }
 
 .catalog-filter h3 {
@@ -219,6 +228,7 @@ img {
   line-height: 30px;
   color: var(--basic-black);
   text-transform: uppercase;
+  margin: 0;
 }
 
 .catalog-filter-list,
@@ -227,6 +237,19 @@ img {
   list-style: none;
   margin: 0;
   padding: 0;
+}
+
+.catalog-filter-list {
+  width: 272px;
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  column-gap: 25px;
+}
+
+.catalog-filter-arrows {
+  display: grid;
+  grid-template-columns: repeat(2, 11px);
+  column-gap: 18px;
 }
 
 .catalog-filter-item a {
@@ -268,7 +291,7 @@ img {
   grid-template-columns: 1fr 1fr;
   column-gap: 41px;
   row-gap: 30px;
-  margin-top: 48px;
+  margin-bottom: 55px;
 }
 
 .catalog-mask {
@@ -302,6 +325,7 @@ img {
 
 .services {
   padding: 80px 0;
+  border-bottom: 2px solid var(--basic-grey);
 }
 
 .services-list {
@@ -358,7 +382,6 @@ img {
 
 /* Benefits */
 
-
 .benefits-number {
   font-size: 45px;
   font-weight: 700;
@@ -382,6 +405,9 @@ img {
 .partners {
   padding: 0;
   margin: 0;
+  margin-bottom: 80px;
+  border-bottom: 2px solid var(--basic-grey);
+  border-top: 2px solid var(--basic-grey);
 }
 
 .partners-list {
@@ -412,7 +438,6 @@ img {
 .pagination-list {
   list-style: none;
   margin: 0;
-  margin-top: 55px;
   margin-bottom: 60px;
   padding: 0;
   display: grid;
@@ -441,11 +466,6 @@ img {
   margin: 0 auto;
 }
 
-.footer-contacts {
-  margin-top: 80px;
-  margin-bottom: ;
-}
-
 .contacts-wrapper {
   width: 1160px;
   margin: 0 auto;
@@ -460,6 +480,10 @@ img {
 
 
 /* Contacts */
+
+.footer-contacts {
+  margin-bottom: 68px;
+}
 
 .contacts-block {
   background-color: #FFFFFF;
@@ -498,7 +522,6 @@ img {
 }
 
 .footer-social {
-  margin-top: 68px;
   margin-bottom: 68px;
 }
 
