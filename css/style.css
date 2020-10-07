@@ -85,29 +85,36 @@ img {
 
 .main-header {
   background-color: var(--basic-grey);
+  padding-top: 51px;
+  margin: 0;
 }
 
 .main-navigation {
-  display: grid;
-  grid-template-columns: auto 1fr auto;
-  align-items: center;
+  display: flex;
+  justify-content: center;
   font-size: 16px;
   font-weight: 500;
   line-height: 30px;
   text-transform: uppercase;
   width: 1160px;
   margin: 0 auto;
-  padding-top: 48px;
 }
 
 .site-navigation {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  column-gap: 45px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   width: 437px;
   list-style: none;
-  margin: 0 auto;
+  margin: 0;
   padding: 0;
+  margin-right: 246px;
+}
+
+.cart-link {
+  width: 115px;
+  text-align: end;
+  align-self: center;
 }
 
 .site-navigation a,
@@ -128,6 +135,10 @@ img {
 
 /* Logo changes when active */
 
+.main-header-logo {
+  margin-right: 202px;
+}
+
 .main-header-logo:active {
   filter: invert(64%) sepia(20%) saturate(11%) hue-rotate(20deg) brightness(102%) contrast(87%);
 }
@@ -139,6 +150,7 @@ img {
   width: 1160px;
   margin: 0 auto;
   padding: 0;
+  margin-bottom: 60px;
 }
 
 
@@ -146,17 +158,26 @@ img {
 
 .slider-wrapper {
   width: 1160px;
-  min-height: 431px;
   margin: 0 auto;
+  padding: 0;
 }
 
 .slider-bar {
   background-color: var(--basic-grey);
+  margin: 0;
+  padding: 0;
 }
 
 .slider-content {
-  display: grid;
-  grid-template-columns: 1fr 760px;
+  display: flex;
+  justify-content: flex-start;
+  height: 431px;
+}
+
+.slider-left-column {
+  display: flex;
+  flex-direction: column;
+  margin-right: 20px;
 }
 
 .slider-content h3 {
@@ -164,16 +185,33 @@ img {
   font-weight: 500;
   line-height: 55px;
   color: var(--basic-black);
+  margin: 0;
+  padding: 0;
+  margin-bottom: 11px;
+  padding-top: 65px;
 }
 
 .slider-content p {
   font-size: 16px;
   line-height: 24px;
+  margin-bottom: 38px;
 }
 
 .slider {
   background-color: var(--basic-grey);
+  height: 431px;
+  margin: 0;
+  padding: 0;
+
 }
+
+.slider-img {
+  width: 760px;
+  height: 431px;
+  margin: 0;
+  padding: 0;
+}
+
 
 /* Page-catalog */
 
@@ -194,7 +232,7 @@ img {
 .catalog-page-title-wrapper {
   width: 727px;
   margin: 0 auto;
-  padding-top: 78px;
+  padding-top: 68px;
   padding-bottom: 108px;
 }
 
@@ -229,6 +267,7 @@ img {
   color: var(--basic-black);
   text-transform: uppercase;
   margin: 0;
+  padding: 0;
 }
 
 .catalog-filter-list,
@@ -296,6 +335,12 @@ img {
 
 .catalog-mask {
   background-color: var(--basic-grey);
+  display: flex;
+  flex-direction: column;
+  max-height: 231px;
+  padding-top: 26px;
+  padding-bottom: 44px;
+  align-items: center;
 }
 
 .catalog-mask h3 {
@@ -305,6 +350,8 @@ img {
   text-align: center;
   text-transform: uppercase;
   color: var(--basic-black);
+  margin: 0;
+  margin-bottom: 12px;
 }
 
 .catalog-mask-link h3:hover {
@@ -319,11 +366,14 @@ img {
   line-height: 18px;
   text-align: center;
   color: var(--basic-text-contacts);
+  margin: 0;
+  margin-bottom: 32px;
 }
 
 /* Services */
 
 .services {
+  margin-bottom: 39px;
   padding: 80px 0;
   border-bottom: 2px solid var(--basic-grey);
 }
@@ -337,12 +387,17 @@ img {
   padding: 0;
 }
 
+.services-item img {
+  margin-bottom: 20px;
+}
+
 .services-item-title {
   font-size: 24px;
   font-weight: 700;
   line-height: 30px;
   text-transform: uppercase;
   color: var(--basic-black);
+  margin: 0;
 }
 
 /* Company */
@@ -351,8 +406,6 @@ img {
   display: grid;
   grid-template-columns: 2fr 1fr;
   column-gap: 149px;
-  padding-top: 39px;
-  padding-bottom: 70px;
   margin: 0;
 }
 
@@ -361,12 +414,25 @@ img {
   font-weight: 500;
   line-height: 45px;
   color: var(--basic-black);
+  margin: 0;
+  margin-bottom: 34px;
+  padding-top: 34px;
+}
+
+.promo-text {
+  margin: 0;
+  margin-bottom: 40px;
 }
 
 .promo-services-title,
 .benefits-table-title {
   font-weight: 700;
   text-transform: uppercase;
+  margin: 0;
+}
+
+.promo-services-title {
+  margin-bottom: 23px;
 }
 
 .benefits-table-title {
@@ -375,12 +441,30 @@ img {
 }
 
 .promo-services-list {
+  display: flex;
+  flex-direction: column;
+  height: 120px;
+  justify-content: space-between;
   list-style: none;
   margin: 0; 
   padding: 0;
+  padding-left: 35px;
 }
 
 /* Benefits */
+
+.benefits {
+  display: grid;
+  width: 360px;
+  grid-template-columns: 1fr;
+  grid-template-rows: 208px auto;
+  row-gap: 37px;
+  padding-bottom: 73px;
+}
+
+.benefits-table-title {
+  margin-bottom: 27px;
+}
 
 .benefits-number {
   font-size: 45px;
@@ -400,10 +484,29 @@ img {
   align-items: center;
 }
 
+.numbers-row {
+  display: flex;
+  justify-content: flex-start;
+  margin-bottom: 10px;
+}
+
+.numbers-row td {
+  margin-right: 20px;
+}
+
+.text-row {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.text-row td {
+  margin-right: 22px;
+}
 /* Partners */
 
 .partners {
   padding: 0;
+  padding: 45px 0;
   margin: 0;
   margin-bottom: 80px;
   border-bottom: 2px solid var(--basic-grey);
@@ -413,10 +516,10 @@ img {
 .partners-list {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  justify-items: center;
+  grid-template-rows: 90px;
+  column-gap: 48px;
   list-style: none;
-  margin: 40px 0 25px 0;
-  padding: 0;
+  margin: 0;
   align-items: center;
 }
 
@@ -436,13 +539,10 @@ img {
 /* Pagination */
 
 .pagination-list {
+  display: flex; 
   list-style: none;
   margin: 0;
-  margin-bottom: 60px;
   padding: 0;
-  display: grid;
-  grid-template-columns: 50px 50px 50px 260px;
-  column-gap: 11px;
 }
 
 .pagination-item a {
@@ -453,12 +553,21 @@ img {
   text-transform: uppercase;
   text-align: center;
   border-radius: 3px;
+  padding: 13px 17px;  
+  border: 3px solid var(--basic-grey);
+  margin-right: 11px;
 }
 
 .pagination-item-current a {
   background-color: var(--basic-pagination-button);
   border: 3px solid var(--basic-pagination-button-border);
 }
+
+.pagination-item-next a {
+  padding-left: 78px;
+  padding-right: 78px;
+}
+
 
 /* Footer */
 
@@ -552,11 +661,14 @@ img {
   font-weight: 700;
   line-height: 36px;
   color: var(--basic-black);
+  margin: 0;
+  margin-bottom: 10px;
 }
 
 .footer-social-text {
   line-height: 22px;
   color: var(--basic-text-footer);
+  margin: 0;
 }
 
 .button {
@@ -607,12 +719,18 @@ img {
 .button-price {
   font-weight: 500;
   line-height: 18px;
+  min-width: 56px;
+  padding: 16px 72px;
 }
 
 .button-price:active {
   color: var(--basic-white);
 }
 
+.button-show-more {
+  padding: 13px 54px;
+  width: 132px;
+}
 
 /* Modal */
 
