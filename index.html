@@ -30,9 +30,7 @@
   <main class="main-content">
     <h1 class="visually-hidden">Дизайн-студия "Нёрдс"</h1>
     <div class="slider-bar">
-      <div class="slider-wrapper">
-        
-        
+      <div class="slider-wrapper"> 
         <section class="slider">  
           <h2 class="visually-hidden">Слайдер</h2>
           <div class="slider-content">
@@ -45,7 +43,9 @@
             <div class="slider-right-column">
               <img class="slider-img" src="img/slider-1.png" width="760" height="431" alt="Слайдер-1">   
               <div class="slider-navigation"> 
-                <!--Здесь будет навигация слайдера-->
+                <button class="slider-button current" aria-label="Первый слайд"></button>
+                <button class="slider-button" aria-label="Второй слайд"></button>
+                <button class="slider-button" aria-label="Третий слайд"></button>
               </div>
             </div>
           </div>
@@ -205,13 +205,25 @@
   </footer>
 
   <section class="modal">
-    <h2>Форма обратной связи</h2>
-    <p>Напишите нам</p>
-    <!-- Здесь будет форма -->
-    <a class="button button-send" href="#">Отправить</a>
-    <button class="modal-close" type="button">Закрыть</button>
+    <h2 class="visually-hidden">Форма обратной связи</h2>
+    <p class="modal-title">Напишите нам</p>
+    <form class="feedback-form" method="post">
+      <p class="feedback-form-item">
+        <label for="name">Ваше имя:</label>
+        <input id="name" type="text" name="name" placeholder="Имя Фамилия">
+      </p>
+      <p class="feedback-form-item">
+        <label for="email">Ваш email:</label>
+        <input id="email" type="email" name="email" placeholder="email@example.com">
+      </p>
+      <p class="feedback-form-item feedback-form-item-big">
+        <label for="feedback-text">Текст письма:</label>
+        <textarea id="feedback-text" name="text" placeholder="В свободной форме"></textarea>
+      </p>
+      <a class="button button-send" href="#">Отправить</a>
+      <button class="close-button" type="submit"><img src="img/close-cross.svg" alt="Закрыть"></button>
+    </form>
   </section>
-
 </body>
 
 </html>
