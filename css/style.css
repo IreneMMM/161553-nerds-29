@@ -214,8 +214,22 @@ img {
 
 .slider-right-column {
   position: relative;
+
 }
 
+.slider-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.slide {
+  display: none;
+}
+
+.slide-current {
+  display: block;
+}
 
 .slider-content h3 {
   font-size: 55px;
@@ -261,6 +275,10 @@ img {
   border-radius: 50%;
 }
 
+.slider-navigation button:focus {
+  outline: none;
+}
+
 .slider-navigation .current {
   position: relative;
 }
@@ -268,15 +286,15 @@ img {
 .slider-navigation .current::after {
   content: "";
   position: absolute;
-  width: 4px;
-  height: 4px;
+  width: 8px;
+  height: 8px;
   bottom: 5px;
   left: 5px;
   background-color: transparent;
   border: 2px solid var(--basic-slider-button-current);
   border-radius: 50%;
+  box-sizing: border-box;
 }
-
 
 
 
@@ -554,9 +572,11 @@ img {
 }
 
 .benefits-table {
-  border-collapse: collapse;
+  column-count: 3;
+  column-gap: 22px;
+  column-width: 120px;
   border: none;
-  border-spacing: 0px;
+  border-collapse: collapse;
   padding: 0;
 }
 
@@ -565,7 +585,7 @@ img {
   margin: 0;
   padding: 0px;
   padding-left: 17px;
-  margin-bottom: 31px;
+  margin-bottom: 25px;
 }
 
 .benefits-number {
@@ -574,6 +594,11 @@ img {
   line-height: 64px;
   color: var(--basic-black);
   padding: 0;
+  padding-top: 6px;
+}
+
+.benefits-number:not(:first-child) {
+  padding-left: 11px;
 }
 
 .benefits-percent {
@@ -586,30 +611,15 @@ img {
   line-height: 18px;
   align-items: center;
   padding: 0;
+  padding-top: 12px;
 }
 
-.benefits-text td {
-  margin-right: 22px;  
+.benefits-text:not(:first-child) {
+  padding-left:11px;
 }
 
-.numbers-row {
-  display: flex;
-  justify-content: flex-start;
-  margin-bottom: 10px;
-}
 
-.numbers-row td {
-  margin-right: 22px;
-}
 
-.text-row {
-  display: flex;
-  justify-content: flex-start;
-}
-
-.text-row td {
-  margin-right: 29px;
-}
 /* Partners */
 
 .partners {
@@ -643,7 +653,7 @@ img {
   opacity: 0.2;
 }
 
-.partners-link::after {
+.partners-item::after {
   content: '';
   position: absolute;
   width: 2px;
@@ -653,9 +663,9 @@ img {
   background-color: var(--basic-grey);
 }
 
-/* .partners-link:last-child::after {
+.partners-item:last-child::after {
   display: none;
-} */
+}
 
 
 .partners-link:hover {
@@ -768,6 +778,9 @@ img {
   padding: 0;
   margin: 0;
   margin-bottom: 23px;
+}
+.contacts-block-phone {
+  color: var(--basic-text-contacts);
 }
 
 .address p {

@@ -41,7 +41,27 @@
             </div>
 
             <div class="slider-right-column">
-              <img class="slider-img" src="img/slider-1.png" width="760" height="431" alt="Слайдер-1">   
+              <ul class="slider-list">
+                <li class="slider-item slide slide-current">
+                  <h3 class="visually-hidden">
+                    Слайдер-1
+                  </h3>
+                  <img class="slider-img" src="img/slider-1.png" width="760" height="431" alt="Слайдер-1">   
+                </li>
+                <li class="slider-item slide">
+                  <h3 class="visually-hidden">
+                    Слайдер-2
+                  </h3>
+                  <img class="slider-img" src="img/slider-1.png" width="760" height="431" alt="Слайдер-2">   
+                </li>
+                <li class="slider-item slide">
+                  <h3 class="visually-hidden">
+                    Слайдер-3
+                  </h3>
+                  <img class="slider-img" src="img/slider-1.png" width="760" height="431" alt="Слайдер-3">   
+                </li>
+              </ul>
+  
               <div class="slider-navigation"> 
                 <button class="slider-button current" aria-label="Первый слайд"></button>
                 <button class="slider-button" aria-label="Второй слайд"></button>
@@ -220,8 +240,8 @@
         <label for="feedback-text">Текст письма:</label>
         <textarea id="feedback-text" name="text" placeholder="В свободной форме"></textarea>
       </p>
-      <a class="button button-send" href="#">Отправить</a>
-      <button class="close-button" type="submit"><img src="img/close-cross.svg" alt="Закрыть"></button>
+      <button type="submit" class="button button-send">Отправить</button>
+      <button class="close-button" type="button"><img src="img/close-cross.svg" alt="Закрыть"></button>
     </form>
   </section>
 </body>
