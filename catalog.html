@@ -18,10 +18,10 @@
       <ul class="site-navigation">
         <li><a href="#">Студия</a></li>
         <li><a href="#">Клиенты</a></li>
-        <li><a class="active" href="#">Магазин</a></li>
+        <li class="active"><a href="#">Магазин</a></li>
         <li><a href="#">Контакты</a></li>
       </ul>
-      <div class="cart-link">
+      <div class="cart-link active">
         <a href="#">Корзина</a>
       </div>
     </nav>
@@ -37,7 +37,81 @@
     <div class="page-catalog container">
       <aside class="aside-filters">
         <h2 class="visually-hidden">Фильтр товаров</h2>
-        <!-- Здесь будет форма фильтра -->
+
+        <form method="get" action="https://echo.htmlacademy.ru">
+          <fieldset class="filter-item">
+              <legend>Стоимость:</legend>
+              <div class="range-filter">
+                <div class="range-controls">
+                  <div class="scale">
+                    <div class="bar"></div>
+                  </div>
+                  <div class="toggle toggle-min" tabindex="0"></div>
+                  <div class="toggle toggle-max" tabindex="0"></div>
+                </div>
+                <div class="price-controls">
+                  <label class="min-price">
+                    от <input type="tel" name="min-price" value="0">
+                  </label>
+                  <label class="max-price">
+                    до <input type="tel" name="max-price" value="15 000">
+                  </label>
+                </div>
+              </div>
+          </fieldset>
+
+          <fieldset>
+            <legend>Сетка:</legend>
+            <div class="radio-filter-list">
+              <div class="radio-filter-item">
+                <label>
+                  <input type="radio" name="case1" value="adaptive" checked> Адаптивная
+                </label>
+              </div>
+              <div class="radio-filter-item">
+                <label>
+                  <input type="radio" name="case2" value="fixed" checked> Фиксированная
+                </label>
+              </div>
+              <div class="radio-filter-item">
+                <label>
+                  <input type="radio" name="case3" value="rub" checked> Резиновая
+                </label>
+              </div>
+            </div>
+          </fieldset>
+
+          <fieldset class="features-filter">
+            <legend>Особенности:</legend>
+            <ul class="features-list">
+              <li>
+                <input class="filter-input filter-input-checkbox visually-hidden" id="slider" type="checkbox" name="slider"
+                  checked>
+                <label for="slider">Слайдер</label>
+              </li>
+              <li>
+                <input class="filter-input filter-input-checkbox visually-hidden" id="advantages-block" type="checkbox"
+                  name="advantages-block">
+                <label for="advantages-block">Блок преимуществ</label>
+              </li>
+              <li>
+                <input class="filter-input filter-input-checkbox visually-hidden" id="news" type="checkbox" name="news"
+                  checked>
+                <label for="news">Новости</label>
+              </li>
+              <li>
+                <input class="filter-input filter-input-checkbox visually-hidden" id="gallery" type="checkbox" name="gallery">
+                <label for="gallery">Галерея</label>
+              </li>
+              <li>
+                <input class="filter-input filter-input-checkbox visually-hidden" id="cart" type="checkbox" name="cart"
+                  disabled>
+                <label for="cart">Корзина</label>
+              </li>
+            </ul>
+          </fieldset>
+          <button class="button">Показать</button>
+        </form>       
       </aside>
 
       <section class="catalog">
@@ -51,6 +125,7 @@
               <li class="catalog-filter-item"><a href="#">По типу</a></li>
               <li class="catalog-filter-item"><a href="#">По названию</a></li>
             </ul>
+
             <ul class="catalog-filter-arrows">
               <li class="catalog-arrow active">
                 <a href="#">
@@ -82,6 +157,7 @@
               <a class="button button-price" href="#">9 900 р.</a>
             </div>
           </li>
+
           <li class="catalog-item">
             <img class="catalog-img" src="img/pink.jpg" width="358" height="576" alt="Шаблон сайта приложения Pink">
             <div class="catalog-mask">
@@ -92,7 +168,11 @@
               <a class="button button-price" href="#">9 900 р.</a>
             </div>
           </li>
+
           <li class="catalog-item">
+            <div class="circles">
+              <div class="circle"></div>
+            </div>
             <img class="catalog-img" src="img/barbershop.jpg" width="358" height="576" alt="Шаблон сайта Барбершоп Бородинский>">
             <div class="catalog-mask">
               <a class="catalog-mask-link" href="#">
@@ -220,11 +300,24 @@
   </footer>
 
   <section class="modal">
-    <h2>Форма обратной связи</h2>
-    <p>Напишите нам</p>
-    <!-- Здесь будет форма -->
-    <a class="button button-send" href="#">Отправить</a>
-    <button class="modal-close" type="button">Закрыть</button>
+    <h2 class="visually-hidden">Форма обратной связи</h2>
+    <p class="modal-title">Напишите нам</p>
+    <form class="feedback-form" method="post">
+      <p class="feedback-form-item">
+        <label for="name">Ваше имя:</label>
+        <input id="name" type="text" name="name" placeholder="Имя Фамилия">
+      </p>
+      <p class="feedback-form-item">
+        <label for="email">Ваш email:</label>
+        <input id="email" type="email" name="email" placeholder="email@example.com">
+      </p>
+      <p class="feedback-form-item feedback-form-item-big">
+        <label for="feedback-text">Текст письма:</label>
+        <textarea id="feedback-text" name="text" placeholder="В свободной форме"></textarea>
+      </p>
+      <button type="submit" class="button button-send">Отправить</button>
+      <button class="close-button" type="button"><img src="img/close-cross.svg" alt="Закрыть"></button>
+    </form>
   </section>
 
 </body>
