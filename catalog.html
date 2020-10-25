@@ -39,9 +39,10 @@
         <h2 class="visually-hidden">Фильтр товаров</h2>
 
         <form method="get" action="https://echo.htmlacademy.ru">
-          <fieldset class="filter-item">
+
+          <fieldset class="range-filter">
               <legend>Стоимость:</legend>
-              <div class="range-filter">
+              <div class="range-filter-wrapper">
                 <div class="range-controls">
                   <div class="scale">
                     <div class="bar"></div>
@@ -51,61 +52,59 @@
                 </div>
                 <div class="price-controls">
                   <label class="min-price">
-                    от <input type="tel" name="min-price" value="0">
+                    от <input type="text" name="min-price" value="0">
                   </label>
                   <label class="max-price">
-                    до <input type="tel" name="max-price" value="15 000">
+                    до <input type="text" name="max-price" value="15 000">
                   </label>
                 </div>
               </div>
           </fieldset>
 
-          <fieldset>
+          <fieldset class="net-filter">
             <legend>Сетка:</legend>
-            <div class="radio-filter-list">
-              <div class="radio-filter-item">
-                <label>
-                  <input type="radio" name="case1" value="adaptive" checked> Адаптивная
-                </label>
-              </div>
-              <div class="radio-filter-item">
-                <label>
-                  <input type="radio" name="case2" value="fixed" checked> Фиксированная
-                </label>
-              </div>
-              <div class="radio-filter-item">
-                <label>
-                  <input type="radio" name="case3" value="rub" checked> Резиновая
-                </label>
-              </div>
-            </div>
+            <ul class="radio-filter-list">
+              <li class="filter-option filter-radio">
+                <input class="visually-hidden filter-input-radio filter-input" type="radio" name="net-group" value="adaptive"
+                  id="adaptive" checked>
+                <label for="adaptive"> Адаптивная</label>
+              </li>
+              <li class="filter-option filter-radio">
+                <input class="visually-hidden filter-input-radio filter-input" type="radio" name="net-group" value="fixed"
+                  id="fixed">
+                <label for="fixed"> Фиксированная</label>
+              </li>
+              <li class="filter-option filter-radio">
+                <input class="visually-hidden filter-input-radio filter-input" type="radio" name="net-group" value="rub" id="rub">
+                <label for="rub"> Резиновая</label>
+              </li>
+            </ul>
           </fieldset>
 
           <fieldset class="features-filter">
             <legend>Особенности:</legend>
-            <ul class="features-list">
-              <li>
+            <ul class="checkbox-list">
+              <li class="filter-option filter-checkbox">
                 <input class="filter-input filter-input-checkbox visually-hidden" id="slider" type="checkbox" name="slider"
                   checked>
                 <label for="slider">Слайдер</label>
               </li>
-              <li>
+              <li class="filter-option filter-checkbox">
                 <input class="filter-input filter-input-checkbox visually-hidden" id="advantages-block" type="checkbox"
                   name="advantages-block">
                 <label for="advantages-block">Блок преимуществ</label>
               </li>
-              <li>
+              <li class="filter-option filter-checkbox">
                 <input class="filter-input filter-input-checkbox visually-hidden" id="news" type="checkbox" name="news"
                   checked>
                 <label for="news">Новости</label>
               </li>
-              <li>
+              <li class="filter-option filter-checkbox">
                 <input class="filter-input filter-input-checkbox visually-hidden" id="gallery" type="checkbox" name="gallery">
                 <label for="gallery">Галерея</label>
               </li>
-              <li>
-                <input class="filter-input filter-input-checkbox visually-hidden" id="cart" type="checkbox" name="cart"
-                  disabled>
+              <li class="filter-option filter-checkbox">
+                <input class="filter-input filter-input-checkbox visually-hidden" id="cart" type="checkbox" name="cart">
                 <label for="cart">Корзина</label>
               </li>
             </ul>
@@ -239,7 +238,8 @@
   <footer class="page-footer main-footer">
     <section class="footer-contacts">
       <h2 class="visually-hidden">Контакты</h2>
-      <img class="map-img" src="img/map.jpg" width="1440" height="416" alt="Карта">
+      <!-- <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037872533248!2d30.320858715846803!3d59.93871648187619!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCDQoNC-0YHRgdC40Y8sIDE5MTE4Ng!5e0!3m2!1sru!2sby!4v1603570425944!5m2!1sru!2sby" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0" title="Офис компании по адресу ул. Большая Конюшенная 19/8, Санкт-Петербург"></iframe> -->
+      <img class="map-img" src="img/map.jpg" width=1440" height="416" alt="Карта">
 
       <div class="contacts-wrapper">    
         <div class="contacts-block">
