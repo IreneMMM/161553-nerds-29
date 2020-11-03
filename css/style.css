@@ -1082,7 +1082,7 @@ img {
   background-color: var(--basic-pagination-button);
   border: 3px solid var(--basic-pagination-button-border);
   box-sizing: border-box;
-  padding: 0 5px;
+  padding: 5px;
 }
 
 .pagination-item-current a:hover {
@@ -1098,8 +1098,7 @@ img {
 
 .pagination-item-next a {
   min-width: 260px;
-  padding-left: 5px;
-  padding-right: 5px;
+  padding: 5px;
   box-sizing: border-box;
 }
 
@@ -1353,11 +1352,20 @@ img {
   margin: auto;
   z-index: 3;
   width: 760px;
-  min-height: 440px;
+  height: 440px;
   color: var(--basic-black);
   background-color: var(--basic-white);
   box-shadow: 0 10px 30px 10px var(--basic-black-transparent_20);
   padding: 68px 100px 85px;
+}
+
+.modal-show {
+  display: block;
+  animation: bounce 0.6s;
+}
+
+.modal-error {
+  animation: shake 0.6s;
 }
 
 .modal-title {
@@ -1483,4 +1491,46 @@ img {
 .button-send {
   margin-top: 9px;
   max-width: 260px;
+}
+
+/* Animations */
+
+@keyframes bounce {
+  0% {
+    transform: translateY(-2000px);
+  }
+
+  70% {
+    transform: translateY(30px);
+  }
+
+  90% {
+    transform: translateY(-10px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes shake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: translateX(-10px);
+  }
+
+  20%,
+  40%,
+  60%,
+  80% {
+    transform: translateX(10px);
+  }
 }
