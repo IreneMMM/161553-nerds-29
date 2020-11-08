@@ -406,6 +406,7 @@ img {
 
 .filter-input-checkbox+label::before {
   display: inline-block;
+  vertical-align: middle;
   content: "";
   width: 23px;
   height: 23px;
@@ -483,15 +484,15 @@ img {
 }
 
 .slider-item:nth-child(1) {
-  background: url("../img/slider-1.png") no-repeat 99% -12px;
+  background: var(--basic-grey) url("../img/slider-1.png") no-repeat 99% -12px;
 }
 
 .slider-item:nth-child(2) {
-  background: url("../img/slider-2.png") no-repeat 99% -12px;
+  background: var(--basic-grey) url("../img/slider-2.png") no-repeat 99% -12px;
 }
 
 .slider-item:nth-child(3) {
-  background: url("../img/slider-3.png") no-repeat 99% -12px;
+  background: var(--basic-grey) url("../img/slider-3.png") no-repeat 99% -12px;
 }
 
 .slider-list h3 {
