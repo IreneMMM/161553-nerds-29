@@ -960,7 +960,7 @@ img {
 }
 
 .benefits-number:not(:first-child) {
-  padding-left: 11px;
+  padding-left: 16px;
 }
 
 .benefits-percent {
@@ -977,7 +977,7 @@ img {
 }
 
 .benefits-text:not(:first-child) {
-  padding-left: 11px;
+  padding-left: 20px;
 }
 
 
